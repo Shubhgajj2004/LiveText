@@ -38,12 +38,12 @@ public class ImageViewActivity2 extends AppCompatActivity {
     private float startY;
 
     // Initialize the button coordinates
-    float buttonLeft = 100; // Adjust the button position as needed
-    float buttonTop = 150;  // Adjust the button position as needed
-    float buttonRight = 250; // Adjust the button position as needed
-    float buttonBottom = 250; // Adjust the button position as needed
+    float buttonLeft = 100; 
+    float buttonTop = 150;  
+    float buttonRight = 250; 
+    float buttonBottom = 250; 
 
-    String selectedLine = null; //to store the selected line
+    String selectedLine = null; 
     Boolean hasShown = false;
 
     @Override
@@ -95,7 +95,6 @@ public class ImageViewActivity2 extends AppCompatActivity {
     }
 
     private void startTextRecognition() {
-        // Initialize the TextRecognizer
         TextRecognizer textRecognizer = new TextRecognizer.Builder(getApplicationContext()).build();
 
         if (!textRecognizer.isOperational()) {
@@ -154,7 +153,6 @@ public class ImageViewActivity2 extends AppCompatActivity {
                     float top = line.getBoundingBox().top;
                     float bottom = line.getBoundingBox().bottom;
                     float right = line.getBoundingBox().right;
-//                    Log.e("pdu", "Line top" + top + "Bottom" + bottom);
 
                     // Highlight the line containing the touch point
                     canvas.drawRect(left, top, right, bottom, paint);
